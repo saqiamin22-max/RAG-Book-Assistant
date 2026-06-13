@@ -1,14 +1,11 @@
 import os
 import tempfile
-from turtle import st
 from langchain_community.document_loaders import PyPDFLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_mistralai import MistralAIEmbeddings, ChatMistralAI
 from langchain_community.vectorstores import Chroma
 from langchain_core.prompts import ChatPromptTemplate
 
-
-api_key = st.secrets["MISTRAL_API_KEY"]
 
 def process_pdf(uploaded_file):
     try:
